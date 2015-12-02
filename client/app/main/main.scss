@@ -1,0 +1,108 @@
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+
+  h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+}
+
+.hero-unit {
+  // position: relative;
+  // padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #222222;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  .image-container {
+    border-right: 20px solid #222222;
+    display: inline-block;
+    height: 500px;
+    margin-left: -5px;
+    overflow: hidden;
+    width: 550px;
+    z-index: 1;
+    transform: (skewX(-20deg));
+    -webkit-backface-visibility: hidden;
+    // transform: rotate(-20deg);
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .image {
+    background-size: cover;
+    background-position: center center;
+    background-position-x: center;
+    background-position-y: center;
+    height: 100%;
+    margin-left: -80px;
+    top: 0px;
+    width: 680px;
+    transform: (skewX(20deg));
+    -webkit-backface-visibility: hidden;
+  }
+  .image-1 {
+    background: #222222 url('/assets/images/csgo.png') no-repeat;
+    background-size: cover;
+    &:hover {
+      background: #222222 url('/assets/images/csgo.gif') no-repeat;
+      background-size: cover;
+    }
+  }
+  .image-2 {
+    background: #222222 url('/assets/images/ark.png') no-repeat;
+    background-size: cover;
+    &:hover {
+      background: #222222 url('/assets/images/ark.gif') no-repeat;
+      background-size: cover;
+    }
+  }
+  .image-3 {
+    background: #222222 url('/assets/images/mc.png') no-repeat;
+    background-size: cover;
+    &:hover {
+      background: #222222 url('/assets/images/mc.gif') no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .btn-signup {
+    background-color: #b7ff2a;
+    color: black;
+
+    &:hover {
+      background-color: #81c300;
+    }
+  }
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.feature {
+  margin: 100px 0;
+
+  .feature-heading {
+    font-weight: 300;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -1px;
+
+    @media (min-width: 768px)
+    {
+      font-size: 50px;
+    }
+  }
+  .feature-image {
+
+  }
+}
