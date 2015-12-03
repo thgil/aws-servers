@@ -9,8 +9,10 @@ header#banner.hero-unit
   .container
     h1 'Allo, 'Allo!
     p.lead Something super catchey that explains what it is we are doing with this homepage will go here!
-    button(type="button").btn.btn-signup.btn-lg Sign up for the alpha
-
+    button.btn.btn-signup.btn-lg(type="button" ng-click="main.isCollapsed = !main.isCollapsed")
+      | Sign up for the alpha
+    div(collapse="main.isCollapsed")
+      .well.well-lg hello form ...asdasdas
 .container
   .col-sm-8.col-sm-offset-2
     .row.feature

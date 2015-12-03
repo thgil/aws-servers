@@ -18,10 +18,10 @@ div.navbar.navbar-default.navbar-static-top.navbar-inverse(ng-controller='Navbar
 
       ul.nav.navbar-nav.navbar-right
         li(ng-hide='isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='') Sign up
+          a(href="#") Sign up
 
         li(ng-hide='isLoggedIn()', ui-sref-active='active')
-          a(ui-sref='') Login
+          a() Login
 
         li(ng-show='isLoggedIn()')
           p.navbar-text Hello {{ getCurrentUser().name }}

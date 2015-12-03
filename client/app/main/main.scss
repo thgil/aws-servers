@@ -11,22 +11,27 @@
 
 .hero-unit {
   // position: relative;
-  // padding: 30px 15px;
   color: #F5F5F5;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   background: #222222;
   overflow: hidden;
   display: flex;
-  align-content: center;
-  align-items: center;
+  align-content: top;
+  align-items: top;
+  height: 500px;
+
+  .container {
+    margin-top: 100px;
+    padding: 30px 30px;
+  }
 
   .image-container {
     border-right: 20px solid #222222;
     display: inline-block;
-    height: 500px;
     margin-left: -5px;
     overflow: hidden;
+    height: 100%;
     width: 550px;
     z-index: 1;
     transform: (skewX(-20deg));
@@ -43,7 +48,7 @@
     background-position-x: center;
     background-position-y: center;
     height: 100%;
-    margin-left: -80px;
+    margin-left: -100px;
     top: 0px;
     width: 680px;
     transform: (skewX(20deg));
