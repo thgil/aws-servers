@@ -163,7 +163,7 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= yeoman.dist %>/!(.git*|.openshift|Procfile)**'
+            '<%= yeoman.dist %>/!(.git*|.openshift|Procfile|.elasticbeanstalk)**',
           ]
         }]
       },
@@ -225,7 +225,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app and karma.conf.js
     wiredep: {
       options: {
-        exclude: [ 
+        exclude: [
           /bootstrap.js/,
           '/json3/',
           '/es5-shim/',
