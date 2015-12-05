@@ -28,7 +28,6 @@ exports.add = function(req, res) {
   var newEmail = new Email(req.body);
   newEmail.saveAsync()
     .spread(function(email) {
-      console.log(email);
       return res.status(201).end();
     })
     .catch(validationError(res));

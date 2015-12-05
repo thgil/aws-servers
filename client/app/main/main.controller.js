@@ -11,6 +11,8 @@ class MainController {
     this.submitted = false;
     this.thanks = false;
     this.email = '';
+    this.loading = false;
+    this.error = {};
   }
 
   collapse() {
@@ -19,26 +21,25 @@ class MainController {
 
   submit(form) {
     this.submitted = true;
+
     if (form.$valid) {
+      this.loading = true;
       this.$http.post('/api/emails',
         { email: this.email })
       .success(function() {
-        console.log('pass');
+        this.loading = false;
         this.thanks = true;
-        this.collapse();
         this.canCollapse = false;
       }.bind(this))
       .catch(function(err) {
-        console.log('err');
-        err = err.data;
-        this.errors = {};
+        this.loading = false;
 
-        // Update validity of form fields that match the mongoose errors
-        angular.forEach(err.errors, function(error, field) {
-          form[field].$setValidity('mongoose', false);
-          this.errors[field] = error.message;
-        });
-      });
+        err = err.data;
+        this.error = {};
+        form.email.$setValidity('mongoose', false);
+        this.error = err.message;
+        console.log(this.error);
+      }.bind(this));
     }
   }
 }

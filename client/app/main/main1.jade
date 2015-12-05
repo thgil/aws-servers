@@ -1,0 +1,85 @@
+header#banner.hero-unit1
+  .image-container
+    .image.image-1
+    .image.image-2
+    .image.image-3
+  .container
+    h1 'Allo, 'Allo!
+    p.lead Play as you go with out high quality game servers. Pay only when you use it, pause when you want and change games at the press of a button.
+    button.btn.btn-signup.btn-lg(type="button" ng-click="main.collapse()" ng-class="{'disabled':!main.canCollapse}")
+      | Sign up for the alpha
+    .row
+      .col-xs-12.col-sm-offset-2.col-sm-8
+        div(uib-collapse="main.isCollapsed").mail
+          .caret-up
+          .well
+            .extra(ng-if="main.thanks")
+              p.lead Thanks for signing up!
+              p We will send you an email when we launch and give you <b>free</b> alpha access!
+            div(ng-if="main.loading")
+              i.fa.fa-spinner.spinner
+            div(ng-hide="main.thanks || main.loading")
+              form(name="form" ng-submit="main.submit(form)" novalidate='')
+                p Put your fucking email here
+                .form-group(ng-class='{ "has-success": form.email.$valid && main.submitted,\
+                "has-error": form.email.$invalid && main.submitted }')
+                  .input-group
+                    input(type="email" name="email" ng-model="main.email" placeholder="your@email.com" required='' mongoose-error='').form-control
+                    .input-group-btn
+                      button(type="submit").btn.btn-default Go
+                .form-group.has-error
+                  p.help-block(ng-show='form.email.$error.email && main.submitted')
+                    | Doesn't look like a valid email.
+                  p.help-block(ng-show='form.email.$error.required && main.submitted')
+                    | What's your email address?
+                  p.help-block(ng-show='form.email.$error.mongoose')
+                    | {{ main.error }}
+    .row
+      .extra(ng-if="!main.thanks")
+        p Get a free 24 hours of server time if you sign up now
+section
+  .angle
+  .container
+    .col-sm-8.col-sm-offset-4
+      .row.feature
+        .col-md-7
+          h2.feature-heading Easy to Launch
+          p.lead. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+            ligula porta felis euismod semper. Praesent commodo cursus magna,
+            vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        .col-md-5
+          img(src="/assets/images/launchpad.jpg").feature-image.img-responsive.center-block
+      .row.feature
+        .col-md-5
+          img(src="/assets/images/tools.jpg").feature-image.img-responsive.center-block
+        .col-md-7
+          h2.feature-heading Easy to Manage
+          p.lead. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+            ligula porta felis euismod semper. Praesent commodo cursus magna,
+            vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .row.feature
+        .col-md-7
+          h2.feature-heading Easy to Scale
+          p.lead. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+            ligula porta felis euismod semper. Praesent commodo cursus magna,
+            vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        .col-md-5
+          img(src="/assets/images/scale.jpg").feature-image.img-responsive.center-block
+      .row.feature
+        .col-md-5
+          img(src="/assets/images/compass.jpg").feature-image.img-responsive.center-block
+        .col-md-7
+          h2.feature-heading Find your setup
+          p.lead. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+            ligula porta felis euismod semper. Praesent commodo cursus magna,
+            vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .row.feature
+        .col-md-7
+          h2.feature-heading Experiment
+          p.lead. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+            ligula porta felis euismod semper. Praesent commodo cursus magna,
+            vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+        .col-md-5
+          img(src="/assets/images/experiment.jpg").feature-image.img-responsive.center-block
+  .angle-rev
+footer

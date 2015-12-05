@@ -1,7 +1,35 @@
-.container
-  p
-    | ByteServers Alpha
-    = ' | '
-    a(href='https://twitter.com/fergusleen') @fergusleen
-    = ' | '
-    a(href='https://github.com/thgil') Issues
+.container-fluid
+  .row.overlay
+    .well
+    // Separate text from skewing to prevent text distortion
+    .slot-container
+      .slot
+        .extra(ng-show="main.thanks")
+          h4 Thanks for signing up!
+          p We will send you an email when we launch and give you <b>free</b> alpha access!
+        div(ng-show="main.loading")
+          i.fa.fa-spinner.spinner
+        div(ng-hide="main.thanks || main.loading")
+          h4 Sign up for the Alpha
+          p Get a free 24 hours of server time if you sign up now :)
+          form(name="form" ng-submit="main.submit(form)" novalidate='')
+            .form-group(ng-class='{ "has-success": form.email.$valid && main.submitted,\
+            "has-error": form.email.$invalid && main.submitted }')
+              .input-group
+                input(type="text" name="email" ng-model="main.email" placeholder="your@email.com" required='' mongoose-error='').form-control
+                .input-group-btn
+                  button(type="submit").btn.btn-default Go
+          .form-group.has-error
+            p.help-block(ng-show='form.email.$error.email && main.submitted')
+              | Doesn't look like a valid email.
+            p.help-block(ng-show='form.email.$error.required && main.submitted')
+              | What's your email address?
+            p.help-block(ng-show='form.email.$error.mongoose')
+              | {{ main.error }}
+  .row
+    p
+      | ByteServers Alpha
+      = ' | '
+      a(href='https://twitter.com/fergusleen') @fergusleen
+      = ' | '
+      a(href='https://github.com/thgil') Issues

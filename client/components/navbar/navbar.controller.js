@@ -5,6 +5,9 @@ angular.module('awsServersApp')
     $scope.menu = [{
       'title': 'Home',
       'state': 'main'
+    }, {
+      'title': 'Home 2',
+      'state': 'main1'
     }];
 
     $scope.isCollapsed = false;
