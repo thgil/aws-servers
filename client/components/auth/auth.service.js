@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .factory('Auth', function Auth($http, User, $cookies, $q) {
     /**
      * Return a callback or noop function

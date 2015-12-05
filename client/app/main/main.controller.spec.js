@@ -3,7 +3,7 @@
 describe('Controller: MainController', function() {
 
   // load the controller's module
-  beforeEach(module('awsServersApp'));
+  beforeEach(module('serverBytes'));
   beforeEach(module('stateMock'));
   beforeEach(module('socketMock'));
 

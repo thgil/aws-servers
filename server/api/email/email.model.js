@@ -42,4 +42,4 @@ EmailSchema
       });
   }, 'The specified email address is already in use.');
 
-module.exports = mongoose.model('Mail', EmailSchema);
+module.exports = mongoose.model('Email', EmailSchema);

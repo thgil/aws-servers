@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .directive('footer', function () {
     return {
       templateUrl: 'components/footer/footer.html',

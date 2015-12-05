@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .factory('Modal', function ($rootScope, $modal) {
     /**
      * Opens a modal

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .directive('navbar', function () {
     return {
       templateUrl: 'components/navbar/navbar.html',

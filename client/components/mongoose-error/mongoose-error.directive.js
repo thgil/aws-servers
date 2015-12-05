@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .directive('mongooseError', function () {
     return {
       restrict: 'A',

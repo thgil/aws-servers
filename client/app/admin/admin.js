@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .config(function($stateProvider) {
     $stateProvider
       .state('admin', {

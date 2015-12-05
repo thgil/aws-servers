@@ -35,7 +35,7 @@
   -webkit-align-items: flex-start;
   -webkit-align-content: flex-start;
   height: 550px;
-  box-shadow: 0px 0px 10px 1px #000000;
+  box-shadow: 0px 0px 15px 1px #000000;
 
   .intro {
     margin-top: 40px;
@@ -131,6 +131,25 @@
   }
 }
 
+.has-success {
+  .btn-mail {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #3c763d;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+}
+.has-error {
+  .btn-mail {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #843534;
+    box-shadow: 0 0 6px #c9302c;
+  }
+}
+
 .navbar-text {
   margin-left: 15px;
 }
@@ -147,9 +166,6 @@
     @media (min-width: 768px) {
       font-size: 50px;
     }
-  }
-  .feature-image {
-
   }
 }
 
@@ -171,126 +187,6 @@
   to {-webkit-transform: rotate(360deg);}
 }
 
-
-.hero-unit1 {
-  color: #F5F5F5;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  background: #222222;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  align-items: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-align-content: flex-start;
-  transition: all 0.5s ease;
-
-
-  .container {
-    padding: 30px 30px;
-
-    .mail {
-      padding: 10px 0 0;
-    }
-
-    .extra {
-      padding-top: 20px;
-    }
-
-    .caret-up {
-      width: 0;
-      height: 0;
-      margin: 0 auto;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-bottom: 20px solid #434857;
-    }
-
-    .well {
-      background-color: #434857;
-      border: none;
-      box-shadow: none;
-      margin-bottom: 0;
-      .btn {
-        height: 34px;
-      }
-      .help-block {
-        margin-bottom: 0;
-      }
-      .form-group {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .image-container {
-    border-right: 20px solid #222222;
-    margin-left: -60px;
-    margin-bottom: 10px;
-    overflow: hidden;
-    height: auto;
-    width: 600px;
-    z-index: 1;
-    transform: skewX(-20deg);
-    -webkit-backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    align-items: flex-start;
-    -webkit-align-items: flex-start;
-    -webkit-align-content: flex-start;
-    transform-origin: top right;
-
-    &:last-child {
-      border-right: none;
-    }
-  }
-
-  .image {
-    background-size: cover;
-    background-position: center center;
-    height: 100px;
-    top: 0px;
-    width: 100%;
-    margin-left: 80px;
-    -webkit-backface-visibility: hidden;
-    transition: all 0.5s ease;
-    transform: skewX(20deg);
-    margin-top: 10px;
-  }
-  .image-1 {
-    background: #222222 url('https://i.ytimg.com/vi/Jbt3AUbV_so/maxresdefault.jpg') no-repeat;
-    background-size: cover;
-    &:hover {
-      transform: skewX(20deg) translate3d(-50px, 0px, 0px);
-    }
-  }
-  .image-2 {
-    background: #222222 url('https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcRY.yavzo7nYP0X88I63UeJxs_ICOvM1iX20FQwMAmM8GnLpv96ekMcvK4NGchKuL_D1rExrzwNPwBHn6H6bde1B6Q7_n3RxOxLdpXSYv0EE0y0vIFmUfHDkw9mU7THqKeEdzBxFp_X_eDX9mJA2KMw1w3wr29w.7tkyPlNeHQ9s-&format=jpg') no-repeat;
-    background-size: cover;
-    &:hover {
-      transform: skewX(20deg) translate3d(-50px, 0px, 0px);
-    }
-  }
-  .image-3 {
-    background: #222222 url('http://images.gameskinny.com/gameskinny/4b43776c96ebf3188cd9d92e5f7994e3.jpg') no-repeat;
-    background-size: cover;
-    &:hover {
-      transform: skewX(20deg) translate3d(-50px, 0px, 0px);
-    }
-  }
-
-  .btn-signup {
-    background-color: #b7ff2a;
-    color: black;
-
-    &:hover {
-      background-color: #81c300;
-    }
-  }
-}
-
 .hide-overflow {
   overflow: hidden;
 }
@@ -307,7 +203,7 @@
 }
 
 .angle-rev {
-  box-shadow: 0px 0px 10px 1px #000000;
+  box-shadow: 0px 0px 15px 1px #000000;
   margin: 0 -50px;
   position: absolute;
   left:0;
@@ -321,7 +217,7 @@
 
 .angle-rev-right {
   z-index: 2;
-  box-shadow: 0px 0px 10px 1px #000000;
+  box-shadow: 0px 0px 15px 1px #000000;
   margin: 0 -1%;
   position: absolute;
   right:0;

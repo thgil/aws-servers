@@ -314,7 +314,7 @@ module.exports = function (grunt) {
     ngtemplates: {
       options: {
         // This should be the name of your apps angular module
-        module: 'awsServersApp',
+        module: 'serverBytes',
         htmlmin: {
           collapseBooleanAttributes: true,
           collapseWhitespace: true,

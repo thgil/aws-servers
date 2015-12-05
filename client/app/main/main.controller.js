@@ -16,7 +16,7 @@ class MainController {
   }
 
   collapse() {
-    if(this.canCollapse) this.isCollapsed = !this.isCollapsed;
+    if(this.canCollapse) { this.isCollapsed = !this.isCollapsed; }
   }
 
   submit(form) {
@@ -37,14 +37,26 @@ class MainController {
         err = err.data;
         this.error = {};
         form.email.$setValidity('mongoose', false);
-        this.error = err.message;
-        console.log(this.error);
+        this.error = err.errors.email.message;
       }.bind(this));
     }
   }
 }
 
-angular.module('awsServersApp')
-  .controller('MainController', MainController);
-
+angular.module('serverBytes')
+  .controller('MainController', MainController)
+  .directive('overwriteEmail', function() {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return {
+      require: 'ngModel',
+      restrict: '',
+      link: function(scope, elm, attrs, ctrl) {
+        if (ctrl) {
+          ctrl.$validators.email = function(modelValue) {
+            return ctrl.$isEmpty(modelValue) || re.test(modelValue);
+          };
+        }
+      }
+    };
+  });
 })();

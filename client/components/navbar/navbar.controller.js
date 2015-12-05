@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('awsServersApp')
+angular.module('serverBytes')
   .controller('NavbarCtrl', function ($scope, Auth) {
     $scope.menu = [{
       'title': 'Home',
